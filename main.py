@@ -2,38 +2,26 @@ from kivy.app import App
 from kivy.uix.image import Image
 from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.graphics import Color, Rectangle, LinearGradient  
 
 
-class Reg_win(App):
-    def __init__(self, **kwargs):
-        super(GradientBackground, self).__init__(**kwargs)
-        with self.canvas.before:
-            # Определяем градиент
-            self.gradient = LinearGradient(pos=(0, 0), size=self.size)
-            self.gradient.colors = [(1, 0, 0, 1), (0, 0, 1, 1)]  # Красный к синим
-            Color(1, 1, 1, 1)  # Цвет фона
-            self.rect = Rectangle(size=self.size, pos=self.pos)
-
-        self.bind(size=self.update_rect, pos=self.update_rect)
-
-    def update_rect(self, *args):
-        self.rect.pos = self.pos
-        self.rect.size = self.size
-
-
-class Log_win(App):
-    pass
-
-class Main_win(App):
-    pass
-
-class Progress_win(App):
+class Reg_win(Screen):
     pass
 
 
-class Words_win(App):
+class Log_win(Screen):
+    pass
+
+class Main_win(Screen):
+    pass
+
+class Progress_win(Screen):
+    pass
+
+
+class Words_win(Screen):
     pass
 
 
