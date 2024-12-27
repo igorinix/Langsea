@@ -1,31 +1,33 @@
 from kivy.app import App
-from kivy.uix.image import Image
-from kivy.core.window import Window
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.widget import Widget
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.graphics import Color, Rectangle, LinearGradient  
+from kivy.graphics import Color, Rectangle
 
 
 class Reg_win(Screen):
-    pass
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)    
 
 
 class Log_win(Screen):
-    pass
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
 
 class Main_win(Screen):
-    pass
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
 
 class Progress_win(Screen):
-    pass
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
 
 class Words_win(Screen):
-    pass
-
-
-
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
 
 class Langsea(App):
@@ -36,12 +38,8 @@ class Langsea(App):
         sm.add_widget(Main_win(name="main"))
         sm.add_widget(Progress_win(name="progress"))
         sm.add_widget(Words_win(name="words"))
-     
         return sm
-        
 
 
-
-
-if __name__ == 'main':
+if __name__ == "__main__":
     Langsea().run()
